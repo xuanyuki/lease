@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/lease
+    username: root
+    password: 123456
+    hikari:
+      connection-test-query: SELECT 1
+      pool-name: SPHHikariPool
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    
+minio:
+  endpoint: https://minio-service.xianyuy.cc
+  access-key: xianyu
+  secret-key: yang123456
+  bucket-name: test
+  
+springdoc:
+  default-flat-param-object: on
