@@ -20,6 +20,6 @@ public class GlobalExceptionHandler {
   public Result handle(LeaseException e) {
 
     e.printStackTrace();
-    return Result.fail();
+    return Result.fail(e.getCode(), e.getMessage());
   }
 }

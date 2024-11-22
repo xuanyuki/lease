@@ -5,6 +5,7 @@ import cc.xianyu.lease.model.enums.SystemUserType;
 import com.baomidou.mybatisplus.annotation.FieldStrategy;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -22,6 +23,7 @@ public class SystemUser extends BaseEntity {
 
     @Schema(description = "密码")
     @TableField(value = "password")
+    @JsonIgnore
     private String password;
 
     @Schema(description = "姓名")
